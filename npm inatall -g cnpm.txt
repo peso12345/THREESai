@@ -31,7 +31,7 @@ import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 控制器文档：https://threejs.org/docs/index.html?q=con#examples/zh/controls/OrbitControls
 
 //宝塔面板
-guangxic.top:8888
+xxxxxxxx.top:8888
 
 //网页空白
 问题产生的环境
