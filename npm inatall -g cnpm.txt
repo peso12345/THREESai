@@ -1,0 +1,58 @@
+//替换成淘宝镜像cnpm
+npm install -g cnpm --registry=httpsregistry.npmmirror.com
+//安装最新版vue/cli
+cnpm install -g @vue/cli
+// 最新稳定版
+cnpm install vue@next
+
+//vscode插件
+Chinese (Simplified) Language
+Vetur Vue支持
+Material icons 图标
+Bracket Pair Colorizer 括号对彩色化
+GitLens 增强Git功能
+Path Intellisense 路径智能提示
+Auto Close Tag 自动关闭标签
+Auto Rename Tag 自动同步标签名
+VSCode Highlight Matching Tag 高亮匹对标签
+HTML CSS Support HTML CSS 支持
+minapp-vscode 微信小程序支持
+npm Intellisense NPM智能提示
+Prettier - Code formatter 强大的代码格式化
+image preview 显示需要加载的图片预览和大小
+
+//浏览器
+广告终结者
+Tampermonkey 插件网址：https://greasyfork.org/zh-CN/
+百度翻译：https://fanyi.baidu.com/?aldtype=16047#auto/zh
+
+//vue项目内使用OrbitControls控制器
+import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
+控制器文档：https://threejs.org/docs/index.html?q=con#examples/zh/controls/OrbitControls
+
+//宝塔面板
+guangxic.top:8888
+
+//网页空白
+问题产生的环境
+
+vue-cli的版本为4.4.1，使用vue -V 或者vue --version命令可查看
+
+vue的版本是2.6.11 使用npm list vue命令可查看（需要cd进入到项目目录）
+
+ps：应该有很多人以为使用vue -V 命令查出来的就是vue的版本，其实查出来的是vue-cli的版本，博主也是被骗了好久，这个问题使用谷歌和百度会得出来不一样的答案，谷歌果然是谷歌！
+
+解决vue-cli4打包成dist后打开空白的问题
+
+问题环境了解了，那么就来看一下解决方法吧。如果你百度过这个问题，那么你就会发现，百度出来的都是说修改config/index.js文件，但你会发现你的vue项目中并没有这个文件或目录，，，
+
+不能说别人的答案不对，只能说过时了。现在使用vue-cli4搭建的vue项目，是没有config文件夹的，所以最新的解决办法应该是这样的：
+
+在项目根目录创建vue.config.js文件，记得是根目录，内容为：
+
+module.exports = {
+ publicPath: process.env.NODE_ENV === 'production'
+    ? './'
+    : '/'
+}
+如果不出意外的话，你重新运行npm run build命令重新打包，应该就能正常打开了。
