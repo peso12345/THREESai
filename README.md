@@ -1,6 +1,5 @@
 # THREES about
-three.js
-使用vue创建three动画的相关练习
+three.js使用vue创建three动画的相关练习
 
 //引入three
 import * as THREE from "three";
